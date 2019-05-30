@@ -1,9 +1,8 @@
-import { isHaiku } from './haiku.js';
+import { isHaiku } from './haiku';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-
 
 $(document).ready(function() {
   $('#haiku-form').submit(function(event) {
@@ -13,15 +12,19 @@ $(document).ready(function() {
     let line2 = $('#line2').val();
     let line3 = $('#line3').val();
     let solutionBool = isHaiku(line1, line2, line3);
+    console.log(line1);
+    console.log(line2);
+    console.log(line3);
+    console.log(solutionBool);
 
     if (solutionBool === true) {
-      $('#solution').text(`Huzzah my dear friend
-        you meld words like a warrior
-        soul of a poet`);
+      $('#solution').html(`<p>Huzzah my dear friend,</p>
+        <p>you meld words like a warrior,</p>
+        <p>soul of a poet</p>`);
       } else {
-        $('#solution').text(`I'm sorry my friend,
-        your words although great,
-        no Haiku they make`);
+        $('#solution').html(`<p>I'm sorry my friend,</p>
+        <p>your words although great,</p>
+        <p>no Haiku they make</p>`);
       }
     });
   });

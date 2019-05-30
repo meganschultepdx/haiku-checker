@@ -6,8 +6,8 @@ export function isVowel(character) {
   }
 }
 
-export function findSyllableCount(string) {
-  const wordArray = string.split(" ");
+export function findSyllableCount(str) {
+  let wordArray = str.split(" ");
   let vowelCount = 0;
   wordArray.forEach(function(word) {
     let charArray = word.split("");
