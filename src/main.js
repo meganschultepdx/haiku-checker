@@ -23,7 +23,7 @@ $(document).ready(function() {
         <p>soul of a poet</p>`);
 		} else {
 			$("#solution").html(`<p>I'm sorry my friend,</p>
-        <p>your words although do flow great,</p>
+        <p>your words although flow so great,</p>
         <p>no Haiku they make</p>`);
 		}
 
